@@ -1,0 +1,97 @@
+[
+  {
+    "restaurant": "La Parrilla del Sol",
+    "category": "Carne",
+    "priceRange": "$$$",
+    "hours": "12:00 - 23:00",
+    "address": "Av. Principal 123, Ciudad",
+    "comments": [
+      {
+        "username": "Carlos Medina",
+        "comment": "La carne estuvo excelente, jugosa y bien condimentada. Volveré pronto.",
+        "rating": 4.5
+      },
+      {
+        "username": "Ana López",
+        "comment": "Muy buena experiencia, aunque el servicio fue un poco lento.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "restaurant": "Sushi Sakura",
+    "category": "Sushi",
+    "priceRange": "$$$$",
+    "hours": "13:00 - 22:00",
+    "address": "Calle Sakura 45, Ciudad",
+    "comments": [
+      {
+        "username": "Ana López",
+        "comment": "El mejor sushi que he probado. Ingredientes frescos y servicio impecable.",
+        "rating": 5
+      },
+      {
+        "username": "Roberto Castillo",
+        "comment": "Excelente calidad y presentación. Totalmente recomendado.",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "restaurant": "Burger Town",
+    "category": "Hamburguesas",
+    "priceRange": "$$",
+    "hours": "11:00 - 21:00",
+    "address": "Av. Burger 77, Ciudad",
+    "comments": [
+      {
+        "username": "Roberto Castillo",
+        "comment": "Las hamburguesas estaban bien, pero tardaron demasiado en servir.",
+        "rating": 3
+      },
+      {
+        "username": "María Fernanda",
+        "comment": "Buena comida, aunque el lugar estaba algo lleno.",
+        "rating": 3.5
+      },
+      {
+        "username": "Roberto Castillo",
+        "comment": "Muy buena comida, aunque prefiero pan artesanal.",
+        "rating": 4
+      },
+      {
+        "username": "Ana López",
+        "comment": "Espectacular!!",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "restaurant": "Café Aroma",
+    "category": "Café",
+    "priceRange": "$",
+    "hours": "08:00 - 20:00",
+    "address": "Calle Aroma 12, Ciudad",
+    "comments": [
+      {
+        "username": "María Fernanda",
+        "comment": "El café es delicioso y el ambiente muy tranquilo. Ideal para trabajar.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "restaurant": "Pasta Bella",
+    "category": "Pasta",
+    "priceRange": "$$",
+    "hours": "12:00 - 22:00",
+    "address": "Av. Pasta 88, Ciudad",
+    "comments": [
+      {
+        "username": "Carlos Medina",
+        "comment": "La pasta estaba un poco simple, esperaba sabores más intensos.",
+        "rating": 2.5
+      }
+    ]
+  }
+]

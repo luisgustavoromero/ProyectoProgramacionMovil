@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Carlos Medina",
+    "email": "carlos.medina@example.com",
+    "password": "cm1234",
+    "favorite": "pasta",
+    "comments": "Amante de la comida italiana y los sabores tradicionales."
+  },
+  {
+    "name": "Ana López",
+    "email": "ana.lopez@example.com",
+    "password": "al9876",
+    "favorite": "sushi",
+    "comments": "Amante de la comida japonesa."
+  },
+  {
+    "name": "Roberto Castillo",
+    "email": "roberto.castillo@example.com",
+    "password": "rc2468",
+    "favorite": "burgers",
+    "comments": "Aficionado a las hamburguesas y la comida rápida gourmet."
+  },
+  {
+    "name": "María Fernanda",
+    "email": "maria.fernanda@example.com",
+    "password": "mf1357",
+    "favorite": "café",
+    "comments": "De personalidad tranquila y fanática de los cafés especiales."
+  }
+]

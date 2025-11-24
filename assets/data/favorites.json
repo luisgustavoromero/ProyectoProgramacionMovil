@@ -1,0 +1,54 @@
+[
+  {
+    "username": "Carlos Medina",
+    "favorites": [
+      {
+        "restaurant": "La Parrilla del Sol",
+        "rating": 4.5
+      },
+      {
+        "restaurant": "Pasta Bella",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "username": "Ana López",
+    "favorites": [
+      {
+        "restaurant": "Sushi Sakura",
+        "rating": 5
+      },
+      {
+        "restaurant": "Burger Town",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "username": "Roberto Castillo",
+    "favorites": [
+      {
+        "restaurant": "Sushi Sakura",
+        "rating": 5
+      },
+      {
+        "restaurant": "Burger Town",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "username": "María Fernanda",
+    "favorites": [
+      {
+        "restaurant": "Café Aroma",
+        "rating": 4
+      },
+      {
+        "restaurant": "Burger Town",
+        "rating": 3.5
+      }
+    ]
+  }
+]
