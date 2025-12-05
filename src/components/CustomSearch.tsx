@@ -1,10 +1,11 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { View, StyleSheet, Text, TouchableOpacity, TextInput, FlatList } from "react-native";
 import restaurants from '../../assets/data/restaurants.json'
+import {restaurantsDB} from '../../assets/data/restaurantsDB'
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../navigation/StackNavigator";
+import { RestaurantsType, RootStackParamList } from "../navigation/StackNavigator";
 
 type NavProp = NativeStackNavigationProp<RootStackParamList>
 
@@ -12,19 +13,19 @@ export default function CustomSearch(){
     const navigation = useNavigation<NavProp>();
 
     const [query, setQuery] = useState("")
-    const [filteredRestaurants, setFilteredRestaurants] = useState(restaurants)
+    const [filteredRestaurants, setFilteredRestaurants] = useState(restaurantsDB)
     const [showDropdown, setShowDropdown] = useState(false)
 
     const handleSearch = (text:string)=>{
         setQuery(text);
         if (text.length > 0) {
-            const filtered = restaurants.filter((r) =>
-                r.restaurant.toLowerCase().includes(text.toLowerCase())
+            const filtered = restaurantsDB.filter((r) =>
+                r.restaurantName.toLowerCase().includes(text.toLowerCase())
             );
         setFilteredRestaurants(filtered);
         setShowDropdown(true);
         } else {
-            setFilteredRestaurants(restaurants);
+            setFilteredRestaurants(restaurantsDB);
             setShowDropdown(true);
         }
 
@@ -32,11 +33,10 @@ export default function CustomSearch(){
     }
 
     const handleSelect = (restaurant: any) => {
-        setQuery(restaurant.restaurant);
+        setQuery(restaurant.restaurantName);
         setShowDropdown(false);
 
         navigation.navigate("Restaurant", {restaurant})
-    
     }
 
     return(
@@ -58,7 +58,7 @@ export default function CustomSearch(){
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item }) => (
                     <TouchableOpacity style={styles.item} onPress={() => {handleSelect(item)}}>
-                        <Text>{item.restaurant}</Text>
+                        <Text>{item.restaurantName}</Text>
                     </TouchableOpacity>
           )}
         />

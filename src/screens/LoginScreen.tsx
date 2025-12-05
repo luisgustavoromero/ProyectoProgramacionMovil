@@ -3,6 +3,7 @@ import CustomButtom from "../components/CustomButton"
 import CustomInput from "../components/CustomInput"
 import { useState, useEffect } from "react"
 import accounts from "../../assets/data/accounts.json"
+import { accountsDB } from "../../assets/data/accountsDB"
 import { useAppDispatch } from "../store/hooks"
 import { setClientProfile } from "../store/clientSlice"
 import AsyncStorage from "@react-native-async-storage/async-storage"
@@ -15,28 +16,11 @@ export default function LoginScreen({navigation}: any){
     const [password, setPassword] = useState('')
     const [storedAccounts, setStoredAccounts] = useState([])
 
-    /*useEffect(() => {
-        async function loadStoredUsers() {
-            const data = await AsyncStorage.getItem("users");
-
-            if (data) {
-                setStoredAccounts(JSON.parse(data));
-            } else {
-                setStoredAccounts([]);
-            }
-        }
-
-        loadStoredUsers();
-    }, []);*/
-
-    async function handleLogin (){
+    
+    const handleLogin = () =>{
         try{
-        const storedData = await AsyncStorage.getItem("users")
-        const storedUsers = storedData ? JSON.parse(storedData) : [];
-
-        const allUsers = [...accounts, ...storedUsers];
-
-        const user = allUsers.find(
+        
+        const user = accountsDB.find(
             (u: any)=>u.email === email.toLowerCase() && u.password === password
         );
         

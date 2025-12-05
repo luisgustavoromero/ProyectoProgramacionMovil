@@ -6,6 +6,7 @@ import CustomInput from "../components/CustomInput";
 import CustomButtom from "../components/CustomButton";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useTheme } from "../context/ThemeContext";
+import { accountsDB } from "../../assets/data/accountsDB";
 
 export default function ProfileScreen ({navigation}: any){
     const {theme, toggleTheme} = useTheme()
@@ -19,7 +20,7 @@ export default function ProfileScreen ({navigation}: any){
     const [comments, setComments] = useState(savedProfile.comments)
     
 
-    const handleSave = async () => {
+    const handleSave = () => {
         if(!clientName || !email || !password || !favorite || !comments) {
             Alert.alert(
                 "Por favor ingrese todo los campos."
@@ -39,12 +40,14 @@ export default function ProfileScreen ({navigation}: any){
             setClientProfile(newUser)
         )
         try{
-            const storedData = await AsyncStorage.getItem("users")
+            /*const storedData = await AsyncStorage.getItem("users")
             const users= storedData ? JSON.parse(storedData): [];
 
             users.push(newUser);
 
-            await AsyncStorage.setItem('users', JSON.stringify(users));
+            await AsyncStorage.setItem('users', JSON.stringify(users));*/
+
+            accountsDB.push(newUser)
 
             Alert.alert('Perfil actualizado',
             "Se han ingresado tus comidas preferidas,")

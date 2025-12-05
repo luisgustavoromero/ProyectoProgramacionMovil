@@ -1,4 +1,4 @@
-[
+export const restaurantsDB = [
   {
     "restaurantName": "La Parrilla del Sol",
     "category": "Carne",

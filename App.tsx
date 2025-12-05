@@ -11,11 +11,13 @@ import { ThemeProvider } from './src/context/ThemeContext';
 export default function App() {
   return (
     <Provider store={store}>
-      <ThemeProvider>
-        <NavigationContainer ref={navigationRef}>
-          <StackNavigator />
-        </NavigationContainer>
-      </ThemeProvider>
+      
+        <ThemeProvider>
+          <NavigationContainer ref={navigationRef}>
+            <StackNavigator />
+          </NavigationContainer>
+        </ThemeProvider>
+      
     </Provider>
     
   );

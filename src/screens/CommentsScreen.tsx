@@ -2,6 +2,7 @@ import { View, StyleSheet, Text, FlatList } from "react-native";
 import comments from "../../assets/data/comments.json"
 import { StarRatingDisplay } from "react-native-star-rating-widget";
 import { useTheme } from "../context/ThemeContext";
+import { commmentsDB } from "../../assets/data/commentsDB";
 
 export default function CommentsScreen({navigation}:any){
     const {theme, toggleTheme} = useTheme()
@@ -10,7 +11,7 @@ export default function CommentsScreen({navigation}:any){
         <View style={themed.container}>
             <Text style={themed.title}>Comentarios realizados</Text>
             <FlatList 
-            data={comments}
+            data={commmentsDB}
             keyExtractor={(item, index)=>index.toString()}
             renderItem={({item})=>(
                 <View style={themed.commentContainer}>

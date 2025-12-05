@@ -1,6 +1,7 @@
 import { View, StyleSheet, Text, FlatList } from "react-native";
 import CustomButtom from "../components/CustomButton";
 import restaurants from '../../assets/data/restaurants.json'
+import { restaurantsDB } from "../../assets/data/restaurantsDB";
 import { useState, useEffect } from "react";
 import { StarRatingDisplay } from "react-native-star-rating-widget";
 import { useTheme } from "../context/ThemeContext";
@@ -16,7 +17,7 @@ export default function RestaurantScreen({route, navigation}:any){
         <View style={themed.container}>
             <View style={themed.picContainer}></View>
             <View style={themed.informationContainer}>
-                <Text style={themed.title}>{restaurant.restaurant}</Text>
+                <Text style={themed.title}>{restaurant.restaurantName}</Text>
                 <Text style={themed.text}>{restaurant.category}</Text>
                 <Text style={themed.text}>{restaurant.priceRange}</Text>
                 <Text style={themed.text}>{restaurant.hours}</Text>
@@ -36,7 +37,7 @@ export default function RestaurantScreen({route, navigation}:any){
                 )}
                 />
             </View>
-            <CustomButtom title={"Add Comment"} onPress={()=>{}} />
+            <CustomButtom title={"Comentar"} onPress={()=>{navigation.navigate('NewComment', {restaurant})}} />
             
         </View>
     )

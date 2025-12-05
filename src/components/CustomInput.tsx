@@ -9,9 +9,10 @@ type Props = {
     value: string;
     placeholder : string;
     onChange: (text: string) => void;
+    multiline?: boolean
 }
 
-export default function CustomInput ({type = "text", required, value, placeholder, onChange}: Props){
+export default function CustomInput ({type = "text", multiline = false , required, value, placeholder, onChange}: Props){
     const {theme, toggleTheme} = useTheme()
     const [isSecureText, setIsSecureText] = useState(type === "password");
     const isPasswordField = type === 'password';
@@ -41,6 +42,7 @@ export default function CustomInput ({type = "text", required, value, placeholde
                 <MaterialIcons name={icon as any } size={20} color="#111417" />
                 <TextInput 
                  placeholder={placeholder}
+                 multiline={multiline}
                  placeholderTextColor="#111417"
                  value={value} 
                  onChangeText={onChange}

@@ -11,6 +11,22 @@ import FavoritesScreen from "../screens/FavoritesScreen";
 import CommentsScreen from "../screens/CommentsScreen";
 import RestaurantScreen from "../screens/RestaurantScreen";
 import CustomSearch from "../components/CustomSearch";
+import NewCommentScreen from "../screens/NewCommentScreen";
+
+export type CommentType = {
+    username: string,
+    comment: string,
+    rating: number;
+}
+
+export type RestaurantsType ={
+    restaurant: string,
+    category: string,
+    priceRange: string,
+    hours: string,
+    address: string,
+    comments: CommentType[]
+}
 
 
 
@@ -24,8 +40,9 @@ export type RootStackParamList = {
     CreatedProfile: undefined,
     Favorites: undefined,
     Comments: undefined,
-    Restaurant: any,
+    Restaurant: RestaurantsType | any,
     CustomSearch: undefined,
+    NewComment: any,
     
 
 }
@@ -47,6 +64,7 @@ export default function StackNavigator () {
             <Stack.Screen name='Comments' component={CommentsScreen}></Stack.Screen>
             <Stack.Screen name='Restaurant' component={RestaurantScreen}></Stack.Screen>
             <Stack.Screen name='CustomSearch' component={CustomSearch}></Stack.Screen>
+            <Stack.Screen name="NewComment" component={NewCommentScreen}></Stack.Screen>
         </Stack.Navigator>
     )
 }
