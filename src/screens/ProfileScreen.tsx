@@ -40,12 +40,6 @@ export default function ProfileScreen ({navigation}: any){
             setClientProfile(newUser)
         )
         try{
-            /*const storedData = await AsyncStorage.getItem("users")
-            const users= storedData ? JSON.parse(storedData): [];
-
-            users.push(newUser);
-
-            await AsyncStorage.setItem('users', JSON.stringify(users));*/
 
             accountsDB.push(newUser)
 
@@ -59,12 +53,9 @@ export default function ProfileScreen ({navigation}: any){
     const themed = styles(theme)
     return(
         <View style={themed.container}>
+            <Text style={themed.title}>Modificar biografía</Text>
             <Text style={themed.text}>Nombre:</Text>
             <CustomInput value={clientName} placeholder={"Ingrese su nombre"} onChange={setClientName} />
-            <Text style={themed.text}>Correo:</Text>
-            <CustomInput type="email" value={email} placeholder={"Ingrese su correo"} onChange={setEmail} />
-            <Text style={themed.text}>Contraseña: </Text>
-            <CustomInput type="password" value={password} placeholder={"Ingrese contraseña"} onChange={setPassword} />
             <Text style={themed.text}>Platillos favoritos:</Text>
             <CustomInput value={favorite} placeholder={"Ingrese su categoría preferida"} onChange={setFavorite} />
             <Text style={themed.text}>Descripcion:</Text>
@@ -77,14 +68,21 @@ export default function ProfileScreen ({navigation}: any){
 
 const styles = (theme: string) => StyleSheet.create({
     container:{
-        backgroundColor: theme=== 'dark'? '#fefcf4': '#111417',
+        backgroundColor: theme=== 'light'? '#fefcf4': '#111417',
         width: '100%',
         height: '100%',
         alignItems: 'center',
         justifyContent:'center'
 
     },
+    title:{
+        color: theme === 'light' ? '#111417' : '#fefcf4',
+        fontSize: 30,
+        fontWeight:'bold',
+        marginBottom: 15, 
+        
+    },
     text:{
-        color: theme === 'light'? '#fefcf4': '#111417',
+        color: theme === 'dark'? '#fefcf4': '#111417',
     }
 })
