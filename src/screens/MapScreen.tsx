@@ -4,7 +4,7 @@ import { useTheme } from "../context/ThemeContext"
 import MapView from "react-native-maps"
 import { useState } from "react"
 
-export default function HomeScreen({navigation}: any){
+export default function MapScreen({navigation}: any){
     const {theme, toggleTheme} = useTheme()
     const themed= styles(theme)
 
@@ -16,17 +16,18 @@ export default function HomeScreen({navigation}: any){
     );
     return(
         <View style={themed.container}>
-            <CustomSearch />
-            {/*<MapView style={themed.map}
+            {/*<CustomSearch />*/}
+            <MapView style={themed.map}
             initialRegion={{latitude: origin.latitude, longitude: origin.longitude,
                 latitudeDelta: 0.035,
                 longitudeDelta: 0.035,
-            }}/>*/}
+            }}/>
 
             
           
         </View>
     )
+
 }
 const styles = (theme:string)=> StyleSheet.create({
     container: {

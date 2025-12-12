@@ -53,7 +53,11 @@ export default function ProfileScreen ({navigation}: any){
     const themed = styles(theme)
     return(
         <View style={themed.container}>
-            <Text style={themed.title}>Modificar biografía</Text>
+            <Text style={themed.title}>Registrarse</Text>
+            <Text style={themed.text}>Correo:</Text>
+            <CustomInput type={'email'} value={email} placeholder={"Ingrese su correo"} onChange={setEmail} />
+            <Text style={themed.text}>Contraseña:</Text>
+            <CustomInput type={'password'} value={password} placeholder={"Ingrese su contraseña"} onChange={setPassword} />
             <Text style={themed.text}>Nombre:</Text>
             <CustomInput value={clientName} placeholder={"Ingrese su nombre"} onChange={setClientName} />
             <Text style={themed.text}>Platillos favoritos:</Text>

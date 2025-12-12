@@ -4,10 +4,12 @@ import SettingsScreen from "../screens/SettingsScreen";
 import CreatedProfileScreen from "../screens/CreatedProfileScreen";
 import RestaurantScreen from "../screens/RestaurantScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
+import MapScreen from "../screens/MapScreen";
 
 export type TabsParamList ={
     Home: undefined,
     Settings: undefined,
+    Map: undefined,
     CreatedProfile: undefined,
     //Restaurant: undefined,
     Favorites: undefined,
@@ -19,6 +21,8 @@ export default function TabsNavigator(){
     return(
         <Tab.Navigator>
             <Tab.Screen name="Home" component={HomeScreen} options={{title: 'Inicio', headerShown: false}}></Tab.Screen>
+            <Tab.Screen name="Map" component={MapScreen} options={{title: 'Mapa', headerShown: false}}></Tab.Screen>
+        
             <Tab.Screen name="CreatedProfile" component={CreatedProfileScreen} options={{title: 'Perfil', headerShown: false}}></Tab.Screen>
         </Tab.Navigator>
     )

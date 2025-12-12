@@ -57,10 +57,10 @@ export default function LoginScreen({navigation}: any){
             <CustomButtom title={"Log in"}
             onPress={handleLogin} />
             <CustomButtom title={'Sign Up'}
-            onPress={()=>{navigation.navigate('Register')}}
+            onPress={()=>{navigation.navigate('Profile')}}
             variant="boton2"/>
 
-            <CustomButtom title={"Modificar perfil (Prueba)"} onPress={()=>{navigation.navigate('Profile')}} />
+            {/*<CustomButtom title={"Modificar perfil (Prueba)"} onPress={()=>{navigation.navigate('Profile')}} />*/}
 
         </View>
     )

@@ -13,6 +13,7 @@ import RestaurantScreen from "../screens/RestaurantScreen";
 import CustomSearch from "../components/CustomSearch";
 import NewCommentScreen from "../screens/NewCommentScreen";
 import RegisterScreen from "../screens/RegisterScreen";
+import MapScreen from "../screens/MapScreen";
 
 export type CommentType = {
     username: string,
@@ -34,6 +35,7 @@ export type RestaurantsType ={
 export type RootStackParamList = {
     Login: undefined,
     Home: undefined,
+    Map: undefined,
     Tabs: undefined,
     Search: undefined,
     Settings: undefined,
@@ -57,6 +59,7 @@ export default function StackNavigator () {
             <Stack.Screen name='Login' component={LoginScreen}></Stack.Screen>
             <Stack.Screen name='Tabs' component={TabsNavigator}></Stack.Screen>
             <Stack.Screen name='Home' component={HomeScreen}></Stack.Screen>
+            <Stack.Screen name='Map' component={MapScreen}></Stack.Screen>
 
             <Stack.Screen name='Search' component={SearchScreen}></Stack.Screen>
             <Stack.Screen name='Settings' component={SettingsScreen}></Stack.Screen>
